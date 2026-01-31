@@ -1,5 +1,7 @@
 #include <Arduino.h>
 #include <Servo.h>
+#include <ros.h>
+#include <std_msgs/UInt8MultiArray.h>
 
 // Define joint limits {min, max} for each servo
 const uint8_t JOINT_LIMITS[][2] = {
@@ -13,7 +15,7 @@ const uint8_t JOINT_LIMITS[][2] = {
 // Define Joint positions 
 const uint8_t PRESETS[][5] = {
   {90, 90, 90, 90, 90},   // Position 0: Home (centered)
-  {90, 90, 90, 90, 120}   // Position 1: Example position
+  {90, 90, 10, 50, 120}   // Position 1: Example position
   // Add new positions here following the same format
 };
 
